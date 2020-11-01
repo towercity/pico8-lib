@@ -1,0 +1,18 @@
+* pico 8 tile-based rpg library
+
+herein: a library of reusable classes and functions for a simple
+tile-based rpg in pico 8. no licenses or anything. fork it, copy it,
+clone it, use it, whatever. it's just a hobby to pass the time during
+covid quarantine
+
+** files included
+*** ~character.p8~
+constructor function to build a generic character. can be an npc, a
+hero... hell, even a door or chest. has functions for movement and
+drawing only. all other functionality is contained in child classes
+
+*** ~hero.p8~
+a child class of ~character.p8~ for player controlled characters ---
+what you might call a hero. so far, only adds functionality for
+player-controlled movement, but with plans to add things like
+inventory, stats, etc
