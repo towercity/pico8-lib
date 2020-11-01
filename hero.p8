@@ -16,6 +16,14 @@
 function new_hero(x,y,spr)
 	 local hero = new_char(x,y,spr)
 
+	 --[[
+			function move_hero
+
+			listens for button inputs then moves hero
+
+			takes in nothin, returns nothing: just moves
+	 ]]
+
 	 function hero:move_hero()
 			if self.moving then
 				 -- tests the axis to move on,
