@@ -1,5 +1,4 @@
 * pico 8 tile-based rpg library
-
 herein: a library of reusable classes and functions for a simple
 tile-based rpg in pico 8. no licenses or anything. fork it, copy it,
 clone it, use it, whatever. it's just a hobby to pass the time during
@@ -16,3 +15,12 @@ a child class of ~character.p8~ for player controlled characters ---
 what you might call a hero. so far, only adds functionality for
 player-controlled movement, but with plans to add things like
 inventory, stats, etc
+
+** sound effects
+assumes certain indexes for sfx, for token saving reasons. this is
+what you might call a "sticky issue". they are
+
+| sfx index | contains |
+|-----------+----------|
+|        10 | bump     |
+

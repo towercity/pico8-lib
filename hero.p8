@@ -11,6 +11,7 @@
 
 	 dependencies:
 	 - new_character, from character.p8
+	 - nr_sfx, from sound.p8
 ]]
 
 function new_hero(x,y,spr)
@@ -39,15 +40,22 @@ function new_hero(x,y,spr)
 				 end
 			else
 				 --listens for movement input
+
+				 -- variable can_move to save if char has moved
+				 local can_move = true
 				 if btn(0) then
-						self:move_character("x",-1)
+						can_move = self:move_character("x",-1)
 				 elseif btn(1) then
-						self:move_character("x",1)
+						can_move = self:move_character("x",1)
 				 elseif btn(2) then
-						self:move_character("y",-1)
+						can_move = self:move_character("y",-1)
 				 elseif btn(3) then
-						self:move_character("y",1)
+						can_move = self:move_character("y",1)
 				 end
+
+				 if not can_move then
+						nr_sfx(1)
+				 end 
 			end
 	 end
 
