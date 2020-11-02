@@ -1,3 +1,6 @@
+-->8
+-- character class
+
 --[[
 	 function new_character
 

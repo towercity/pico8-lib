@@ -1,3 +1,6 @@
+-->8
+-- hero class
+
 --[[
 	 function new_hero
 
