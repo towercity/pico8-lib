@@ -27,4 +27,6 @@ function new_map(x1,y1,x2,y2)
 	 function map:draw()
 			map(self.x1,self.y1,0,0,self.x2,self.y2)
 	 end 
+
+	 return map
 end
