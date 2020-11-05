@@ -16,7 +16,7 @@
 	 returns the scene
 ]]
 
-function new_scene(map,starting_pos,npcs,music,hero)
+function new_scene(map,starting_pos,npcs,song,hero)
 	 local scene = {
 			map=map,
 			npcs=npcs,
@@ -44,7 +44,7 @@ function new_scene(map,starting_pos,npcs,music,hero)
 			self.map:draw()
 
 			-- then npcs
-			foreach(self.npcs, draw_object)
+			if npcs then foreach(self.npcs, draw_object) end
 
 			-- and then the hero
 			self.hero:draw()
@@ -57,7 +57,7 @@ function new_scene(map,starting_pos,npcs,music,hero)
 	 ]]
 
 	 function scene:init()
-			music(music)
+			music(song)
 			self:draw()
 	 end
 

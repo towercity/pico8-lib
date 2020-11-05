@@ -14,7 +14,7 @@
 ]]
 
 function new_map(x1,y1,x2,y2)
-	 local map = {
+	 local m = {
 			x1=x1,y1=y1,
 			x2=x2,y2=y2
 	 }
@@ -24,9 +24,9 @@ function new_map(x1,y1,x2,y2)
 
 			draws the map
 	 ]]
-	 function map:draw()
+	 function m:draw()
 			map(self.x1,self.y1,0,0,self.x2,self.y2)
 	 end 
 
-	 return map
+	 return m
 end

@@ -17,8 +17,8 @@
 	 - nr_sfx, from sound.p8
 ]]
 
-function new_hero(x,y,spr)
-	 local hero = new_char(x,y,spr)
+function new_hero(x,y,sprites)
+	 local hero = new_character(x,y,sprites)
 
 	 --[[
 			function move_hero

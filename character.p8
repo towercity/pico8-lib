@@ -8,17 +8,17 @@
 
 	 takes in:
 	 - x, y: x and y coordinates
-	 - spr: nested tables of sprites: {{d1,d2},{u1,u2},{l1,l2},{r1,r2}}
+	 - spr: nested tables of sprites: {{u1,u2},{d1,d2},{l1,l2},{r1,r2}}
 
 	 returns: character object
 ]]
 
-function new_character(x,y,spr)
+function new_character(x,y,sprites)
 	 local char = {
 			-- passed in values
 			x=x,
 			y=y,
-			spr=spr,
+			spr=sprites,
 
 			-- currently selected sprite index
 			spr_i=1,
@@ -98,8 +98,8 @@ function new_character(x,y,spr)
 				 if(axis == "x") then
 						if (self:can_move(self.x+vel,self.y)) then
 							 self.moving = true
-							 self.x+=dir
-							 self.dx+=dir
+							 self.x+=vel
+							 self.dx+=vel
 							 if (sgn(vel) == -1) then
 									self.spr_i = 3
 							 else
@@ -111,8 +111,8 @@ function new_character(x,y,spr)
 				 elseif(axis == "y") then
 						if (self:can_move(self.x,self.y+vel)) then
 							 self.moving = true
-							 self.y+=dir
-							 self.dy+=dir
+							 self.y+=vel
+							 self.dy+=vel
 							 if (sgn(vel) == -1) then
 									self.spr_i = 1
 							 else
@@ -163,9 +163,9 @@ function new_character(x,y,spr)
 
 	 function char:flip_sprite()
 			if self.dance == 1 then
-				 dance = 2
+				 self.dance = 2
 			elseif self.dance == 2 then
-				 dance = 1
+				 self.dance = 1
 			end
 	 end
 
