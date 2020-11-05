@@ -50,6 +50,25 @@ function new_scene(map,starting_pos,npcs,music,hero)
 			self.hero:draw()
 	 end
 	 
-	 -- TODO: add init and update
+	 --[[
+			function init
+
+			sets up the scene
+	 ]]
+
+	 function scene:init()
+			music(music)
+			self:draw()
+	 end
+
+	 --[[
+			function update
+
+			contains update logic for the scene
+	 ]]
+	 function scene:update()
+			hero:move_hero()
+	 end
+	 
 	 return scene
 end
